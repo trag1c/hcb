@@ -72,9 +72,6 @@ TRANSPARENCY_MODE_REPLACEMENT = (
     "Transparency Mode",
 )
 
-START_ANCHOR = "# @@@ codegen-start"
-END_ANCHOR = "# @@@ codegen-start"
-
 ORGANIZATION_METHOD_TEMPLATE = """
     async def async_get_{name}(self, {params}) -> {ret_type}:
     {docstring}
