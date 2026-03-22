@@ -1,0 +1,49 @@
+[project]
+name = "hcb"
+version = "1.0.0"
+description = "Python wrapper for the HCB v3 API"
+readme = "README.md"
+authors = [{ name = "trag1c", email = "dev@jakubr.me" }]
+requires-python = ">=3.10"
+license = "MIT"
+dependencies = ["httpx>=0.28.1", "pydantic>=2.12.5"]
+
+[build-system]
+requires = ["uv_build>=0.10.2,<0.11.0"]
+build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+  "basedpyright>=1.38.3",
+  "mdformat>=1.0.0",
+  "mdformat-gfm>=1.0.0",
+  "mdformat-gfm-alerts>=2.0.0",
+  "ruff>=0.15.7",
+]
+
+[tool.basedpyright]
+reportImplicitOverride = false
+reportPrivateUsage = false
+reportAny = false
+reportExplicitAny = false
+reportImplicitStringConcatenation = false
+
+[tool.ruff]
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["ALL"]
+ignore = ["COM", "D", "FIX", "S", "ANN401", "PLR2004"]
+
+[tool.ruff.lint.per-file-ignores]
+"scripts/*" = ["INP001"]
+
+[tool.ruff.lint.flake8-import-conventions.aliases]
+datetime = "dt"
+
+[tool.ruff.lint.flake8-type-checking]
+strict = true
+runtime-evaluated-base-classes = [
+  "pydantic.BaseModel",
+  "pydantic_settings.BaseSettings",
+]
