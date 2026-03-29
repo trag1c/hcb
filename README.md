@@ -3,9 +3,9 @@
 
 # hcb
 
-hcb is a Python 3.10+ wrapper library for the [Hack Club Bank] v3 API. It
-provides typed access to organizations, transactions, cards, donations, and
-other financial data with both synchronous and asynchronous support.
+hcb is a Python 3.10+ wrapper library for the [HCB] v3 API. It provides typed
+access to organizations, transactions, cards, donations, and other financial
+data with both synchronous and asynchronous support.
 
 - [Installation](#installation)
 - [Usage](#usage)
@@ -97,6 +97,6 @@ See [core.py](src/hcb/core.py).
 
 `hcb` is licensed under the [MIT License]. © [trag1c], 2026
 
-[hack club bank]: https://bank.hackclub.com
+[HCB]: https://hcb.hackclub.com
 [mit license]: https://opensource.org/license/mit
 [trag1c]: https://github.com/trag1c
